@@ -1,4 +1,4 @@
-# ML-Driven Optimization of Childcare Allocation and Labor Demand 
+# Public Data-Based Job Matching System
 This is the result of a project that utilized and applied public data related to childcare centers and labor (job opening, job search) to machine learning algorithms.    
 
 This result was also applied to the "2024 National Happiness Service Discovery and Entrepreneurship Contest" hosted by the Korea Social Security Information Service and was selected as the final entry.
