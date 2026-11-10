@@ -15,26 +15,30 @@ In a situation where orphanage leavers and those in need of protection continue 
 **Step 2. Data Preprocessing** (Reference to **Algorithm**)</br></br>
 **Step 3. Modeling** </br>
 
-- #1. Perform regional latitude/longitude-based clustering (100 clusters) using the KMeans algorithm </br>
-<img width="452" alt="그림1" src="https://github.com/joon-hee-kim/ML-Driven-Optimization-of-Childcare-Allocation-and-Labor-Demand/assets/121689436/e458c6df-a820-48ad-9f52-195c60e54d0b"> </br>
+- #1. Perform regional latitude/longitude-based clustering (100 clusters) using the K-Means algorithm </br>
+
+  <img width="452" alt="그림1" src="https://github.com/joon-hee-kim/Public-Data-Based-Job-Matching-System/assets/121689436/e458c6df-a820-48ad-9f52-195c60e54d0b"> </br>
 
 
 - #2. Using the K-Means algorithm again, perform a second clustering (50 clusters) based on the results of #1 and the 2022 labor demand ratio </br>
-<img width="452" alt="그림2" src="https://github.com/joon-hee-kim/ML-Driven-Optimization-of-Childcare-Allocation-and-Labor-Demand/assets/121689436/548f621a-0517-4d71-92f3-43bf14cc9df1"> </br>
+
+  <img width="452" alt="그림2" src="https://github.com/joon-hee-kim/Public-Data-Based-Job-Matching-System/assets/121689436/548f621a-0517-4d71-92f3-43bf14cc9df1"> </br>
 
 
 **Step 4. Analysis and visualization** </br>
 
 - The heatmap shows the center of each cluster, weighted by its average labor demand ratio. It was designed so that red indicates high labor demand (a low ratio) and green indicates low labor demand (a high ratio). </br>
 - Therefore, population should be allocated first to regions with a lower ratio, following the ranking in Step 5. </br>
-<img width="452" alt="그림3" src="https://github.com/joon-hee-kim/ML-Driven-Optimization-of-Childcare-Allocation-and-Labor-Demand/assets/121689436/c426552d-7d74-4470-acc6-2920c49f1822"> </br>
+
+  <img width="452" alt="그림3" src="https://github.com/joon-hee-kim/Public-Data-Based-Job-Matching-System/assets/121689436/c426552d-7d74-4470-acc6-2920c49f1822"> </br>
 
 
 **Step 5. Childcare facility matching**</br>
 
 - Distance calculation </br>
 - The figure below shows the step for calculating the distance between childcare facilities and labor demand areas. </br>
-<img width="452" alt="그림4" src="https://github.com/joon-hee-kim/ML-Driven-Optimization-of-Childcare-Allocation-and-Labor-Demand/assets/121689436/f06ae4bf-b01b-49f9-9dd0-64695f602ed1"> </br>
+
+  <img width="452" alt="그림4" src="https://github.com/joon-hee-kim/Public-Data-Based-Job-Matching-System/assets/121689436/f06ae4bf-b01b-49f9-9dd0-64695f602ed1"> </br>
 
 
 - Ranking calculation </br>
@@ -61,11 +65,12 @@ In a situation where orphanage leavers and those in need of protection continue 
 **Final result** </br>
 - As an example, the figure below shows the three childcare centers closest to the center of cluster 49. </br>
 (“노동수치 군집 번호”, “보육 시설”, and “거리” mean the labor cluster ID, the childcare center, and the distance in km.) </br>
-<img width="549" alt="스크린샷 2024-06-16 오후 11 46 19" src="https://github.com/joon-hee-kim/ML-Driven-Optimization-of-Childcare-Allocation-and-Labor-Demand/assets/121689436/2b81761b-e5da-42cd-b476-31cf0dd4408a"> </br></br>
+
+  <img width="549" alt="스크린샷 2024-06-16 오후 11 46 19" src="https://github.com/joon-hee-kim/Public-Data-Based-Job-Matching-System/assets/121689436/2b81761b-e5da-42cd-b476-31cf0dd4408a"> </br></br>
 
 
 ## Algorithm
-<img width="795" alt="스크린샷 2024-06-15 오후 4 55 54" src="https://github.com/joon-hee-kim/ML-Driven-Optimization-of-Childcare-Allocation-and-Labor-Demand/assets/121689436/958aed18-6dd0-4165-a482-7b43f6b9d353"> </br>
+<img width="795" alt="스크린샷 2024-06-15 오후 4 55 54" src="https://github.com/joon-hee-kim/Public-Data-Based-Job-Matching-System/assets/121689436/958aed18-6dd0-4165-a482-7b43f6b9d353"> </br>
 
 **K-Means clustering** was used for regional grouping. For region–childcare matching, geographic distance was calculated to identify the nearest childcare facilities. Data preprocessing was conducted using regional job opening and job search data.
 
